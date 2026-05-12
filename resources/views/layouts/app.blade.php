@@ -30,7 +30,10 @@
                         <a href="{{ route('revenues.index') }}" class="nav-link {{ request()->routeIs('revenues.*') ? 'active' : '' }}">الإيرادات</a>
                         <a href="{{ route('expenses.index') }}" class="nav-link {{ request()->routeIs('expenses.*') ? 'active' : '' }}">المصروفات</a>
                         <a href="{{ route('cashbox.index') }}" class="nav-link {{ request()->routeIs('cashbox.*') ? 'active' : '' }}">الخزنة</a>
-                        <a href="{{ route('advances.index') }}" class="nav-link">العهدة</a>
+                        <a href="{{ route('advances.index') }}" 
+   class="nav-link {{ request()->routeIs('advances.*') ? 'active' : '' }}">
+   العهدة
+</a>
                     </div>
 
                     {{-- Divider --}}
