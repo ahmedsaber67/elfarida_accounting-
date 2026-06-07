@@ -11,13 +11,12 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-    public function run(): void
-    {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+     if (!User::find(1)) {
+        User::create([
+            'id'       => 1,
+            'name'     => 'Admin',
+            'email'    => 'admin@elfarida.com',
+            'password' => Hash::make('password123'),
         ]);
     }
 }
