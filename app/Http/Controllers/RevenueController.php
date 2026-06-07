@@ -56,7 +56,7 @@ class RevenueController extends Controller
         'date'        => $request->date,
         'notes'       => $request->notes,
         'source_type' => 'other',
-        'created_by'  => 1, // مؤقت لحد ما نعمل auth
+        'created_by' => auth()->id() ?? 1,
     ]);
 
     return redirect()->route('revenues.index')->with('success', 'تمت إضافة الإيراد بنجاح');
